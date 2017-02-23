@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calendar_app</string>
+    <string name="enterBtn">Enter</string>
+    <string name="enterReminder">Enter event</string>
+    <string name="calBtn">Calendar</string>
+
+</resources>
