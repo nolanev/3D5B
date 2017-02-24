@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/enterReminder"
         android:textColor="@color/opaqueRed"
-        android:id="@+id/enterReminder"/>
+        android:id="@+id/enterReminder"
+        android:inputType="text" />
 
 
     <Button
