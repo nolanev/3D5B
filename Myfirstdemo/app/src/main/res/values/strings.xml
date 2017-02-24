@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Myfirstdemo</string>
+    <string name="enterBtn">Activity List</string>
+    <string name="enterReminder">Enter event</string>
+    <string name="calBtn">Calendar</string>
+
+</resources>
