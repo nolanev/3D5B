@@ -21,6 +21,7 @@ import android.widget.TimePicker;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.Toast;
 import android.content.Context;
+import com.example.quinnc14.calendar_app.CalendarNotification;
 
 import java.io.FileOutputStream;
 
@@ -45,13 +46,16 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
         int i = preferences.getInt("numberoflaunches", 1);
+/*
 
         if (i < 2){
             alarmMethod();
             i++;
             editor.putInt("numberoflaunches", i);
+            editor.putInt("numberoflaunches", i);
             editor.commit();
         }
+*/
 
 
         timePicker = (TimePicker) findViewById(R.id.timePicker);
@@ -99,12 +103,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void alarmMethod(){
-        Intent alarmintent = new Intent(this, NotifyService.class);
-        AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
-        pendingIntent = PendingIntent.getService(this, 0, alarmintent, 0);
+    public void alarmMethod(View view){
+        CalendarNotification upcomingEvent = new CalendarNotification();
+
+        upcomingEvent.notify("boom!!");
 
 
+        /*  Intent alarmintent = new Intent(this, CalendarNotification.class);
+        //AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+        //pendingIntent = PendingIntent.getService(this, 0, alarmintent, 0);
+
+        startActivity(alarmintent);
         //pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,alarmintent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         Calendar calendar = Calendar.getInstance();
@@ -117,16 +126,17 @@ public class MainActivity extends AppCompatActivity {
         //calendar.set(2017,5,1,19,55,00);
         long when = calendar.getTimeInMillis();         // notification time
 
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        //AlarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
         // alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 1000 * 60 * 60 * 24, pendingIntent);
         Toast.makeText(MainActivity.this, "Start Alarm", Toast.LENGTH_LONG).show();
-
+        */
     }
 
     public void selectCal(View view){
         Intent intentCal = new Intent(this, CalendarActivity.class);
         startActivity(intentCal);
     }
+
 
 
 

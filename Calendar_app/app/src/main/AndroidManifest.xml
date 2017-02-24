@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quinnc14.calendar_app">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +20,7 @@
         <activity android:name=".CalendarActivity" />
         <activity android:name=".DisplayReminder" />
         <activity android:name=".NotifyService" />
-        <activity android:name=".ShowEvent"></activity>
+        <activity android:name=".ShowEvent" />
     </application>
 
 </manifest>

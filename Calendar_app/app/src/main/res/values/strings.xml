@@ -4,4 +4,11 @@
     <string name="enterReminder">Enter event</string>
     <string name="calBtn">Calendar</string>
 
+    <string name="calendar_notification_title_template">Calendar: %1$s</string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="calendar_notification_placeholder_text_template">You have %1$s and an
+        upcoming event. Click to view calendar.
+    </string>
+
 </resources>
